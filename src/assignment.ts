@@ -93,8 +93,9 @@ function getDayType(day: Day): string {
   }
 }
 
-async function squareAsync(n: number): Promise<number> {
-  const promise = new Promise<number>((resolve, reject) => {
+type PromiseType = number;
+async function squareAsync(n: PromiseType): Promise<PromiseType> {
+  const promise = new Promise<PromiseType>((resolve, reject) => {
     if (n >= 0) {
       setTimeout(() => {
         resolve(n * n);

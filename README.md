@@ -49,12 +49,12 @@ And when a value cannot ever occur or for functions that never return (such as t
 ## Example:
 ```
 type Shape = 
-  | { kind: "circle"; radius: number }
-  | { kind: "square"; sideLength: number }
-  | { kind: "rectangle"; width: number; height: number };
+  | { shapeName: "circle"; radius: number }
+  | { shapeName: "square"; sideLength: number }
+  | { shapeName: "rectangle"; width: number; height: number };
 
 function getArea(shape: Shape): number {
-  switch (shape.kind) {
+  switch (shape.shapeName) {
     case "circle":
       return Math.PI * shape.radius ** 2;
     case "square":
@@ -89,4 +89,4 @@ Like: - You don't need to write: string or: number; TypeScript handles the work 
 Even though, you didn't say that "this is a number," the compiler recognizes that x is a number if you write
 ```  let x = 5 ```
   
-It's useful since it understands what you're trying to achieve and you don't have to write every kind of tyep everywhere. Therefore, if you make a mistake, it may detect it and display an error message.
+It's useful since it understands what you're trying to achieve and you don't have to write every kind of type everywhere. Therefore, if you make a mistake, it may detect it and display an error message.

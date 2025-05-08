@@ -14,7 +14,8 @@ When migrating code or interacting with third party libraries (like - api callin
   
 ## Example:  
   
-```let value: any = 5;  
+```typescript
+let value: any = 5;  
 value = "Hello";  
 value.toFixed();  
 There you are no getting any errors above, even if the value is a string at runtime.
@@ -30,7 +31,8 @@ We can use typeof or instanceof to checks type.
  We can use when we want to confirm safety before using something.  
   
 ## Example:
- ``` let value: unknown = "Hello";  
+ ```typescript
+ let value: unknown = "Hello";  
   
 // Error: Object type is 'unknown' // value.toUpperCase();  
   
@@ -47,7 +49,7 @@ Beneficial for full tests in switch statements.
 And when a value cannot ever occur or for functions that never return (such as throw an error or infinite loop).
 
 ## Example:
-```
+```typescript
 type Shape = 
   | { shapeName: "circle"; radius: number }
   | { shapeName: "square"; sideLength: number }
@@ -71,7 +73,7 @@ function getArea(shape: Shape): number {
 
 ```
 ### Never is frequently used in functions that never finish normally(Like thorowing error):
-```
+```typescript
 function throwError(message: string): never {
   throw new Error(message);
 }
@@ -87,6 +89,7 @@ Like: - You don't need to write: string or: number; TypeScript handles the work 
 
 ## example:
 Even though, you didn't say that "this is a number," the compiler recognizes that x is a number if you write
-```  let x = 5 ```
+```typescript
+let x = 5 ```
   
 It's useful since it understands what you're trying to achieve and you don't have to write every kind of type everywhere. Therefore, if you make a mistake, it may detect it and display an error message.

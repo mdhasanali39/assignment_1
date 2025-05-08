@@ -90,6 +90,6 @@ Like: - You don't need to write: string or: number; TypeScript handles the work 
 ## example:
 Even though, you didn't say that "this is a number," the compiler recognizes that x is a number if you write
 ```typescript
-let x = 5 ```
-  
+let x = 5
+ ```
 It's useful since it understands what you're trying to achieve and you don't have to write every kind of type everywhere. Therefore, if you make a mistake, it may detect it and display an error message.

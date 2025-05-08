@@ -8,7 +8,7 @@ A type that can accept any value without restrictions.
   
 No need type checking, allowing you to assign anything to a variable of any type and do whatever you want with it.  
   
-## Use case: 
+## Where to use: 
 When migrating code or interacting with third party libraries (like - api calling) , you don't know the exact type.  
   
 ## Example:  
@@ -25,7 +25,7 @@ There you are no getting any errors above, even if the value is a string at runt
   
 We can use typeof or instanceof to checks type.  
   
-## Use case:
+## Where to use:
  We can use when we want to confirm safety before using something.  
   
 ## Example:
@@ -41,7 +41,7 @@ if (typeof value === "string") { console.log(value.toUpperCase()); // OK
 A type that never return any type.  
    
   
-## Use case:
+## Where to use:
 Beneficial for full tests in switch statements.
 And when a value cannot ever occur or for functions that never return (such as throw an error or infinite loop).
 
@@ -56,7 +56,7 @@ function throwError(message: string): never {
 Type inference in **TypeScript** refers to the **compiler's** to automatically deduce the type of a variable, parameter, or return value of not explicitly type declaration.
 
 When you don't specify the type of variables in TypeScript, it guesses for you the type. This is known as type inference. 
-## Use case:
+## Where to use:
 Like: - You don't need to write: string or: number; TypeScript handles the work and will catch errors if you dont explicitly define the type of that variables.
 
 ## example:
